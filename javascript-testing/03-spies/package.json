@@ -1,0 +1,7 @@
+{
+  "author": "Lucas Santos <lucassm02@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "sinon": "9"
+  }
+}
