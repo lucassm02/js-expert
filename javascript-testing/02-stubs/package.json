@@ -1,6 +1,4 @@
 {
-  "name": "js-expert",
-  "repository": "https://github.com/lucassm02/js-expert.git",
   "author": "Lucas Santos <lucassm02@gmail.com>",
   "license": "MIT",
   "devDependencies": {
