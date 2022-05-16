@@ -1,6 +1,6 @@
-const Base = require("./base");
+const Entity = require("./entity");
 
-class CarCategory extends Base {
+class Category extends Entity {
   constructor({ id, name, carIds, price }) {
     super({ id, name, carIds, price });
     this.id = id;
@@ -10,4 +10,4 @@ class CarCategory extends Base {
   }
 }
 
-module.exports = CarCategory;
+module.exports = Category;
