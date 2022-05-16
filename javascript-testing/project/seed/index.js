@@ -1,7 +1,7 @@
 const faker = require("faker");
 
 const Car = require("../src/entities/car");
-const CarCategory = require("../src/entities/car-category");
+const Category = require("../src/entities/category");
 const Customer = require("../src/entities/customer");
 const { join } = require("path");
 const { writeFile } = require("fs/promises");
@@ -23,7 +23,7 @@ const loop = (callback) => {
 const write = (filename, data) =>
   writeFile(join(seederFolder, filename), JSON.stringify(data));
 
-const carCategory = new CarCategory({
+const carCategory = new Category({
   id: faker.datatype.uuid(),
   name: faker.vehicle.type(),
   carIds: [],
@@ -55,15 +55,13 @@ const customers = loop((data, stop) => {
     age: faker.datatype.number({ min: 18, max: 50 }),
   });
 
-  carCategory.carIds = [...carCategory.carIds, customer.id];
-
   return [...data, customer];
 });
 
 async function main() {
   await write("cars.json", cars);
   await write("customers.json", customers);
-  await write("car-categories.json", [carCategory]);
+  await write("categories.json", [carCategory]);
 }
 
 main();
