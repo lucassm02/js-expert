@@ -74,7 +74,7 @@ describe("GetRandomCarByCategoryId suite tests", () => {
     expect(calledWithResult).to.be.ok;
   });
 
-  it("Ensure that the getRandomCarByCategoryId returns a valid car", async () => {
+  it("Given a category it should return an available car", async () => {
     const getRandomItemFromArrayStub = sandbox.stub();
 
     getRandomItemFromArrayStub.withArgs(category.carIds).returns(carId);
