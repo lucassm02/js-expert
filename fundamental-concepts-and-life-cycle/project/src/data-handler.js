@@ -1,5 +1,5 @@
 import database from '../database.json' assert { type: 'json' };
-import Person from './person.js';
+import Vehicle from './vehicle.js';
 import { formateSnakeCaseKeysForCamelCase } from '@badass-team-code/formatted-cases-words';
 
 export default class DataHandler {
@@ -10,7 +10,7 @@ export default class DataHandler {
     this.#data = formateSnakeCaseKeysForCamelCase(database);
   }
   get(language = 'pt-BR') {
-    return this.#data.map((item) => new Person(item).formatted(language));
+    return this.#data.map((item) => new Vehicle(item).formatted(language));
   }
   add(data) {
     const { id: lastId } = this.#data.at(-1);
