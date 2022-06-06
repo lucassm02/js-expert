@@ -1,0 +1,18 @@
+[
+  {
+    "question": "\nDigite os veículos separados por ','. Ex: Motocicleta, Carro, Caminhão\n",
+    "field": "vehicles"
+  },
+  {
+    "question": "\nDigite a quilometragem. Ex: 1000\n",
+    "field": "kmTraveled"
+  },
+  {
+    "question": "\nDigite a data de inicio. Ex: 2009-01-01\n",
+    "field": "from"
+  },
+  {
+    "question": "\nDigite a data de fim. Ex: 2022-02-03\n",
+    "field": "to"
+  }
+]
